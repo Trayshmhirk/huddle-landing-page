@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+/* Base styles*/
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root{
+   --body-txt-color: hsl(208, 11%, 55%);
+   --header-bg-color: hsl(193, 100%, 96%);
+   --mobile-header-bg-color: linear-gradient( to bottom, hsl(193, 100%, 96%), hsla(192, 100%, 96%, 0));
+   --header-txt-color: hsl(192, 100%, 9%);
+   --footer-bg-color: hsl(192, 100%, 9%);
+   --footer-txt-color: hsl(193, 100%, 96%);
+   --try-it-bttn-color: #fff;
+   --try-it-bttn-txt: hsl(192, 100%, 9%);
+   --try-it-bttn-txt-hover: hsl(208, 11%, 55%);
+   --started-bttn-color: hsl(322, 100%, 66%);
+   --started-bttn-hover-color: hsla(322, 100%, 66%, 0.7);
+   --started--bttn-txt-color: #fff;
+   --started--bttn-txt-hover: hsl(192, 100%, 9%);
+   --bttn-box-shadow: 0px 4px 5px rgba(134, 134, 134, 0.205);
+   --sect-box-shadow: 0px 0px 10px rgba(134, 134, 134, 0.39);
+   --font-family-open-sans: 'Open Sans', sans-serif;
+   --font-family-poppins: 'poppins', sans-serif;
+}
+
+/* Global Styles*/
+
+body{
+   color: var(--body-txt-color);
+   font-family: var(--font-family-open-sans);
+   font-size: 18px;
+}
+
+h1, h2{
+   font-family: var(--font-family-poppins);
+}
+
+h1, h2, header p{
+   color: var(--header-txt-color);
+}
+
+li{
+   list-style: none;
+}
+
+a{
+   text-decoration: none;
+   color: var(--footer-txt-color);
+}
+
+img.logo{
+   width: 12em;
+}
+
+button{
+   height: 3.5em;
+   padding: 0em 4.5em;
+   border: none;
+   border-radius: 25px;
+   box-shadow: var(--bttn-box-shadow);
+   cursor: pointer;
+   transition: transform 250ms cubic-bezier(0, 0, 0.61, 1.74);
+   font-family: inherit;
+}
+
+button:hover{
+   transform: scale(1.1);
+}
+
+button:active{
+   transform: scale(0.95);
+   box-shadow: none;
+   transition: none;
+}
+
+/* Header */
+
+header{
+   background: var(--header-bg-color) url(images/bg-hero-desktop.svg) no-repeat;
+   background-size: contain;
+}
+
+header > div{
+   max-width: 1440px;
+   padding: 2em 4.5em;
+}
+
+header nav{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+header nav .try-it{
+   background-color: var(--try-it-bttn-color);
+   color: var(--try-it-bttn-txt);
+}
+
+header nav .try-it:hover{
+   color: var(--try-it-bttn-txt-hover);
+}
+
+header div.hero-content{
+   display: flex;
+   gap: 3em;
+   margin: 4em auto;
+   margin-bottom: 2em;
+}
+
+header div.hero-content img{
+   width: 55%;
+}
+
+header div.hero-content > div{
+   margin-top: 4.5em;
+}
+
+header div.hero-content > div h1{
+   font-size: 2.15em;
+   font-weight: 600;
+   margin: 1em auto;
+}
+
+header div.hero-content > div p{
+   font-size: .93em;
+   margin-bottom: 2em;
+}
+
+.started{
+   background-color: var(--started-bttn-color);
+   color: var(--started--bttn-txt-color);
+}
+
+.started:hover{
+   background-color: var(--started-bttn-hover-color);
+}
+
+/* Section */
+
+.container{
+   margin: 6em 4.5em;
+   margin-bottom: 4em;
+   max-width: 1440px;
+}
+
+section > div.content-box{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 2.5em 1.5em;
+   padding-left: 5em;
+   margin-bottom: 2em;
+   box-shadow: var(--sect-box-shadow);
+   border-radius: 10px;
+}
+
+section > div.content-box div{
+   max-width: 550px;
+}
+
+section > div.content-box div > h2{
+   margin-bottom: .5em;
+}
+
+section > div.content-box img{
+   width: 350px;
+}
+
+section > .flow div{
+   order: 2;
+}
+
+/* CTA Section*/
+
+section.cta{
+   background-color: var(--started--bttn-txt-color);
+   box-shadow: var(--sect-box-shadow);
+   border-radius: 10px;
+   max-width: 700px;
+   padding: 3em 0em;
+   margin: 0em auto;
+   text-align: center;
+
+   transform: translateY(35%);
+   z-index: 99;
+}
+
+section.cta h2{
+   margin-bottom: 1em;
+}
+
+/* Footer */
+
+footer{
+   background-color: var(--footer-bg-color);
+   color: var(--footer-txt-color);
+   padding: 2em 5.5em;
+   padding-top: 8.5em;
+   height: 35em;
+   font-size: .85em;
+}
+
+footer .footer-content{
+   display: flex;
+   gap: 5em;
+   margin-top: 2em;
+   max-width: 1440px;
+}
+
+.footer-content > div{
+   width: 450px;
+}
+
+.footer-content > .main-foot div{
+   display: flex;
+   gap: 1em;
+   margin-bottom: 2em;
+}
+
+.main-foot > div img{
+   height: 1em;
+}
+
+.main-foot > div:nth-of-type(1) img{
+   margin-right: .72em;
+   margin-top: .4em;
+}
+
+.main-foot > div:nth-of-type(2) img{
+   margin-right: .45em;
+   margin-top: .3em;
+}
+
+.main-foot > div:nth-of-type(3) img{
+   margin-right: .2em;
+   margin-top: .3em;
+}
+
+.footer-content > .foot-links{
+   display: flex;
+   justify-content: center;
+   gap: 6em;
+}
+
+.foot-links li{
+   margin-bottom: 1em;
+}
+
+.foot-links a{
+   position: relative;
+}
+
+.foot-links a::after{
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   height: 2px;
+   border-radius: 5px;
+   background-color: var(--footer-txt-color);
+   transform-origin: right;
+   transform: scale(0);
+
+   transition: transform 200ms ease-in;
+}
+
+.foot-links a:hover::after{
+   transform: scale(1);
+   transform-origin: left;
+}
+
+.foot-links a:active,
+.foot-links a:active:after{
+   opacity: .5;
+}
+
+.footer-content > .social-links{
+   width: 400px;
+}
+
+.footer-content > .social-links ul{
+   display: flex;
+   align-items: center;
+   gap: 2em;
+   margin-bottom: 13em;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1200px) {
+
+   header > div{
+      padding: 2em 2em;
+   }
+
+   header div.hero-content > div{
+      margin-top: 2em;
+   }
+
+   .container{
+      margin: 5em 2em;
+      margin-bottom: 4em;
+   }
+
+   section > div.content-box{
+      gap: 2em;
+   }
+
+   footer{
+      padding: 2em 3em;
+      padding-top: 8.5em;
+   }
+
+   footer .footer-content{
+      gap: 3.5em;
+   }
+}
+
+@media screen and (max-width: 1024px) {
+
+   header div.hero-content img{
+      width: 55%;
+      height: 100%;
+      margin-top: 3em;
+   }
+
+   section > div.content-box img{
+      width: 45%;
+   }
+}
+
+@media screen and (max-width: 768px) {
+
+   img.logo{
+      width: 10em;
+   }
+
+   header div.hero-content{
+      max-width: 600px;
+      margin: 2em auto;
+      gap: 1em;
+   }
+   
+   header div.hero-content img{
+      width: 100%;
+   }
+
+   header div.hero-content, 
+   section > div.content-box,
+   footer .footer-content,
+   .footer-content > .foot-links{
+      flex-direction: column;
+      text-align: center;
+   }
+
+   section > div.content-box{
+      padding: 2.5em 1.5em;
+      margin-bottom: 3em;
+   }
+
+   section > .grow div{
+      order: 2;
+   }
+
+   section > .flow div{
+      order: 2;
+   }
+
+   section > .user div{
+      order: 2;
+   }
+
+   section.cta{
+      margin: 0em 2em;
+   }
+
+   footer{
+      height: unset;
+      padding-top: 10em;
+   }
+
+   footer .footer-content{
+      gap: 2em;
+   }
+
+   .footer-content > div,
+   .footer-content > .social-links{
+      width: 100%;
+   }
+
+   footer .footer-content,
+   .footer-content > .foot-links{
+      text-align: left;
+   }
+
+   .footer-content > .foot-links{
+      gap: 0;
+      align-items: flex-start;
+   }
+
+   .footer-content > .social-links{
+      text-align: center;
+      margin-bottom: 2em;
+   }
+
+   .footer-content > .social-links ul{
+      margin-bottom: 1em;
+      justify-content: center;
+   }
+}
+
+@media screen and (max-width: 468px) {
+   body{
+      font-size: 15px;
+   }
+   
+   header > div{
+      padding: 2em 1em;
+   }
+
+   header nav .try-it{
+      padding: 0em 2em;
+      height: 2.5em;
+   }
+
+   header div.hero-content{
+      max-width: 320px;
+   }
+
+   header div.hero-content > div h1{
+      font-size: 1.9em;
+   }
+
+   header div.hero-content > div p{
+      font-size: 1.05em;
+   }
+
+   header nav > img.logo{
+      width: 8em;
+   }
+
+   .container{
+      margin: 5em 1.5em;
+      margin-bottom: 4em;
+   }
+
+   .container > section{
+      font-size: .9em;
+   }
+
+   section > div.content-box div{
+      max-width: 270px;
+
+   }
+
+   section.cta{
+      margin: 0em 1.5em;
+   }
+
+   section.cta h2{
+      font-size: 1.1em;
+      margin-bottom: 1.5em;
+   }
+
+   section.cta button{
+      padding: 0em 3.5em;
+      font-size: .8em;
+   }
+
+   footer{
+      padding: 2em 1.5em;
+      padding-top: 8.5em;
+   }
+}
+
+@media screen and (max-width: 375px) {
+   
+   header{
+      background: var(--header-bg-color) url(images/bg-hero-mobile.svg) no-repeat;  
+   }
+
+}
